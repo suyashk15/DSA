@@ -32,6 +32,7 @@ void topview(Node *root)
         Node *temp = p.first;
         int hd = p.second;
         // Only enter the first element of a HD
+        // For bottom view, remove if condition. Last element of hd will be stored
         if(m.find(hd)==m.end()) m[hd] = temp->data;
 
         if(temp->left) q.push({temp->left,hd-1});
